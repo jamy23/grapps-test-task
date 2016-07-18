@@ -1,0 +1,22 @@
+<ion-view view-title="Books">
+  <ion-content>
+    <ion-list can-swipe="true">
+      <ion-item ng-repeat="book in books" href="#/app/playlists/{{book.id}}" class="row">
+        <span class="col">{{book.id}}</span>
+        <span class="col">{{book.title}}</span>
+        <span class="col iitem-note">
+          {{book.author_name}}
+        </span>
+        <span class="col bbadge bbadge-light">{{book.pages_count}}</span>
+        <ion-option-button class="button-positive"
+                           ng-click="update(item)">
+          Update
+        </ion-option-button>
+        <ion-option-button class="button-assertive"
+        ng-click="delete(item)">
+        Delete
+      </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
